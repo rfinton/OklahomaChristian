@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>OCU - WeRHome</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://s3.amazonaws.com/ocu/assets/css/jr_style.css">
+    <script src="https://s3.amazonaws.com/enrollmentfuel/lib/track-v1.3.js"></script>
+    <script src="https://s3.amazonaws.com/ocu/node_modules/jquery/jquery.min.js"></script>
+    <script>
+      'use strict';
+      document.cookie = "MFI=##purl##;domain=oc.edu;expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+      var formResp = [];
+      var actionBtn;
+
+      function _submit() {
+        $('input[name=submitaction]').val(actionBtn.dataset.action);
+        $('input[name=form_resp]').val(formResp.toString());
+
+        if(actionBtn.id == "visit") {
+          window.open("https://oc.edu/admissions/undergraduate/visit/?purl=##purl##");
+        }
+        
+        return true;
+      }
+      
+      $(document).ready(function() {
+        $('#ready, #visit').click(function() {
+          actionBtn = this;
+        });
+
+        $('.icon').css('opacity', 1);
+
+        $('.max-width-768 tr').click(function() {
+          var data = this.dataset.resp;
+          var icon = $(this).find('.icon')[0];
+          
+          if(icon.style.opacity == 0) {
+            icon.style.opacity = 1;
+          } else {
+            icon.style.opacity = 0;
+          }
+
+          for(var i = 0; i < formResp.length; i++) {
+            if(data == formResp[i]) {
+              formResp.splice(i,1);
+              return;
+            }
+          }
+
+          formResp.push(data);
+        });
+      });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139928482-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-139928482-1');
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="main-content">
+        <div class="header">
+          <img id="hoc" src="https://s3.amazonaws.com/ocu/assets/img/humans.jpeg" alt="humans-of-oc">
+          <img id="hoc-mobile" src="https://s3.amazonaws.com/ocu/assets/img/hoc-mobile.jpeg" alt="humans-of-oc">
+          <img id="hoc-text" src="https://s3.amazonaws.com/ocu/assets/img/humans-text-2.png" alt="humans-of-oc">
+        </div>
+        
+        <h3 style="text-align: center;">Hey, ##firstname##!</h3>
+
+        <p>
+          <b>Oklahoma Christian University has a special vibe. We Live Jesus Loud every day. We call OC home—and we want you to call OC home, too. Come for a campus visit! Click on the icons below to tell us which of these amazing things at OC and Oklahoma City interests you?</b>
+        </p>
+
+        <div class="row max-width-768">
+          <div class="col-xs-12 col-sm-6">
+            <table>
+              <tbody>
+                <tr data-resp="Location">
+                  <td id="location" class="icons">
+                    <div class="icon"><img src="https://s3.amazonaws.com/ocu/assets/img/okWhite.svg" alt="location"></div>
+                  </td>
+                  <td class="desc">I'm excited to be close to Oklahoma City so I can live a "big" life.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <table>
+              <tbody>
+                <tr data-resp="Athletics">
+                  <td id="athletics" class="icons">
+                    <div class="icon"><img src="https://s3.amazonaws.com/ocu/assets/img/eagleWhite.svg" alt="athletics"></div>
+                  </td>
+                  <td class="desc">I want to be part of an athletic team and roll with Ike, the mascot.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        
+        <div class="row max-width-768">
+          <div class="col-xs-12 col-sm-6 item">
+            <table>
+              <tbody>
+                <tr data-resp="Spirituality">
+                  <td id="spirituality" class="icons">
+                    <div class="icon"><img src="https://s3.amazonaws.com/ocu/assets/img/bibleWhite.svg" alt="spirituality"></div>
+                  </td>
+                  <td class="desc">It's great you have a spiritual life component. It's part of who I am.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-xs-12 col-sm-6 item">
+            <table>
+              <tbody>
+                <tr data-resp="Internships">
+                  <td id="internships" class="icons">
+                    <div class="icon"><img src="https://s3.amazonaws.com/ocu/assets/img/cityWhite.svg" alt="internships"></div>
+                  </td>
+                  <td class="desc">I'm considering an internship at some point. You guys have a city booming with opportunity.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="row max-width-768">
+          <div class="col-xs-12 col-sm-6 item">
+            <table>
+              <tbody>
+                <tr data-resp="Academics">
+                  <td id="academics" class="icons">
+                    <div class="icon"><img src="https://s3.amazonaws.com/ocu/assets/img/testTubeWhite.svg" alt="academics"></div>
+                  </td>
+                  <td class="desc">I want to be challenged academically. Love that you are among the best in the west!</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-xs-12 col-sm-6 item">
+            <table>
+              <tbody>
+                <tr data-resp="Community">
+                  <td id="community" class="icons">
+                    <div class="icon"><img src="https://s3.amazonaws.com/ocu/assets/img/houseWhite.svg" alt="community"></div>
+                  </td>
+                  <td class="desc">OC is home means something to me. It's important that I matter during the next four years of college.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <form method="post" id="form" onsubmit="return _submit();">
+          <div style="display:none;">
+            <input type="text" name="form_resp" value="">
+            <input type="text" name="submitaction" value="">
+          </div>
+          
+          <div id="actions">
+            <input type="submit" id="ready" data-action="I'm Ready" value="I'm Ready&mdash;What's Next?">
+            <input type="submit" id="visit" data-action="I'd Like to Visit" value="I'd Like To Visit">
+          </div>
+        </form>
+
+        <div id="footer">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6" id="footer-logo">
+              <img src="https://s3.amazonaws.com/ocu/assets/img/ocu-logo.svg" alt="ocu-logo">
+            </div>
+            <div class="col-xs-12 col-sm-6 address-info">
+              <div>www.oc.edu<br/>800-877-5010</div>
+              <div>2501 E. Memorial Road<br/>Oklahoma City, OK</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+@font-face {
+  font-family: MyriadPro;
+  src: url('https://s3.amazonaws.com/ocu/assets/fonts/MyriadPro-Regular.otf'); }
+* {font-family: 'MyriadPro', sans-serif;}
+
+body {
+  background-image: url('https://s3.amazonaws.com/ocu/assets/img/gradient-wallpaper-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;}
+
+#main-content {
+  background: white; }
+#main-content p {
+  font-size: 18px;
+  margin: 30px;}
+.desc {
+  padding-left: 15px;
+  font-size: 18px;}
+.desc:hover {
+  text-decoration: underline;}
+.icon, .desc {
+  cursor: pointer;}
+
+.max-width-768 {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto 30px;}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;}
+.header img {
+  width: 100%;}
+.header img#hoc-mobile,
+.header img#hoc2-mobile {
+  display: none;}
+.header img#hoc-text {
+  width: 80%;
+  max-width: 600px;
+  position: absolute;}
+
+#location {
+  background-image: url('https://s3.amazonaws.com/ocu/assets/img/okRed.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;}
+#athletics {
+  background-image: url('https://s3.amazonaws.com/ocu/assets/img/eagleRed.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;}
+#spirituality {
+  background-image: url('https://s3.amazonaws.com/ocu/assets/img/bibleRed.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;}
+#internships {
+  background-image: url('https://s3.amazonaws.com/ocu/assets/img/cityRed.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;}
+#academics {
+  background-image: url('https://s3.amazonaws.com/ocu/assets/img/testTubeRed.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;}
+#community {
+  background-image: url('https://s3.amazonaws.com/ocu/assets/img/houseRed.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;}
+
+.icons {
+  width: 25%;}
+.icon {
+  background: #fff;}
+.icon img {
+  width: 100%;}
+
+form {
+  margin-bottom: 30px;}
+#actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;}
+input[type=submit] {
+  background: transparent;
+  border: none;
+  margin: 30px 30px 0;
+  font-size: 24px;}
+#ready {
+  padding: 15px 30px;
+  background: #5EC1B3; }
+
+#footer {
+  padding: 30px;
+  color: #fff;
+  background: #393738;}
+#footer .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+#footer-logo {
+  text-align: center;}
+.address-info {
+  text-align: center;
+}
+.address-info div {
+  display: inline-block;
+  padding: 0 30px;}
+.address-info div:last-of-type {
+  border-left: solid 2px #fff;}
+
+.links {
+  max-width: 768px;
+  padding-bottom: 12px;
+  margin: auto;}
+.links .btn.btn-default {
+  border-color: transparent;
+  border-top: solid 6px #fff;
+  border-left: solid 6px #fff;
+  border-right: solid 6px #fff;
+  border-bottom: solid 6px #fff;
+  border-radius: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #5EC1B3;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;}
+.links div.row,
+.links div {
+  padding: 0;
+  margin: 0;}
+
+.phone img { display: none; }
+.phone-true { display: none; }
+#phone-link {
+  border: solid 2px #5EC1B3;
+  margin: 6px;}
+#phone-link p {
+  text-align: center;
+  margin: 0;
+  padding: 12px;}
+
+@media screen and (max-width: 991px) {
+  #footer-logo img {
+    width: 100%;}
+  .address-info {
+    border-left: solid 2px #fff;}
+  .address-info div:last-of-type {
+    border: none;}
+}
+
+@media screen and (max-width: 420px) {
+  .header img#hoc {
+    display: none;}
+  .header img#hoc-mobile,
+  .header img#hoc2-mobile {
+    display: inline;}
+  .max-width-768 {
+    margin: 0 auto;}
+  .max-width-768 > div {
+    margin-bottom: 15px;}
+  .links .btn.btn-default {
+    font-size: 14px;}
+  #footer .row {
+    flex-direction: column;}
+  .address-info {
+    border-left: none;}
+}

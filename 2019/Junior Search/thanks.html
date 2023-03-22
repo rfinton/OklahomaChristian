@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>OCU - WeRHome</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://s3.amazonaws.com/ocu/assets/css/jr_style.css">
+    <script src="https://s3.amazonaws.com/ocu/node_modules/jquery/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        var ph = "##phone##";
+        var str = "##form_resp##";
+        var list = str.split(",");
+        var el = document.querySelector('#selections');
+        var html = '';
+        var answers = [
+          "<li>I\'m excited to be close to Oklahoma City so I can live a \"big\" life.</li>",
+          "<li>I want to be part of an athletic team and roll with Ike, the mascot.</li>",
+          "<li>It\'s great you have a spiritual life component. It\'s part of who I am.</li>",
+          "<li>I\'m considering an internship at some point. You guys have a city booming with opportunity.</li>",
+          "<li>I want to be challenged academically. Love that you are among the best in the west!</li>",
+          "<li>\"OC is home\" means something to me. It\'s important that I matter during the next four years of college.</li>"
+        ];
+
+        for(var i = 0; i < list.length; i++) {
+          if(list[i] == 'Location')
+            html = html + answers[0];
+          if(list[i] == 'Athletics')
+            html = html + answers[1];
+          if(list[i] == 'Spirituality')
+            html = html + answers[2];
+          if(list[i] == 'Internships')
+            html = html + answers[3];
+          if(list[i] == 'Academics')
+            html = html + answers[4];
+          if(list[i] == 'Community')
+            html = html + answers[5];
+        }
+
+        el.innerHTML = "<ul>" + html + "</ul>";
+
+        if(ph) {
+          $(".phone input").prop("disabled", true);
+          $(".phone button").hide();
+          $(".phone img").show();
+          $(".phone-true").show();
+          $(".phone-false").hide();
+        }
+      });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139928482-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-139928482-1');
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="main-content">
+        <div class="header">
+          <img id="hoc" class="hoc-banner" src="https://s3.amazonaws.com/ocu/assets/img/hoc2.JPG" alt="humans-of-oc">
+          <img id="hoc2-mobile" class="hoc-banner" src="https://s3.amazonaws.com/ocu/assets/img/hoc2-mobile.JPG" alt="humans-of-oc">
+        </div>
+        
+        <p class="main-text">
+          <b style="font-size:1.3em;">Thanks ##firstname##!</b><br/>
+          <br/>
+          <b>Humans of OC do amazing things. We can tell you will, too. Thanks for letting us know:</b>
+        </p>
+
+        <p class="main-text" id="selections"></p>
+
+        <p class="main-text">
+          Because we know this information about you, we can ensure you <b>Live Jesus Loud</b>, everyday.<br/>
+          <br/>
+          Come visit us, ##firstname##&mdash;Oklahoma Christian and the city are home&mdash;and we want you to be part of the family. Let's get your visit scheduled right away, using the link below.<br/>
+          <br/>
+          <span class="phone-false">We would love to talk to you about your scholarship opportunities. Please provide us with your phone number.</span>
+          <span class="phone-true">Thanks for providing your number. We'll be in touch soon.</span>
+        </p>
+        <div style="font-size:18px; margin:30px;">
+          <form method="post" class="form-inline phone">
+            <input type="text" name="phone" value="##phone##" placeholder="000-000-0000" class="form-control">
+            <button type="submit" class="btn btn-default">Submit</button>
+            <img src="http://s3.amazonaws.com/tabor.ef/assets/img/checkmk.gif">
+          </form>
+        </div>
+        <p>
+          <img id="sig" src="https://s3.amazonaws.com/ocu/assets/img/JancySig.jpg" alt="Jancy Scott"><br/>
+          Jancy Scott<br/>
+          Director of Admission
+        </p>
+
+        <div class="links">
+          <div class="row">
+            <div class="col-xs-6">
+              <a class="link btn btn-default" target="_blank" href="##visit##">Visit Campus</a>
+            </div>
+            <div class="col-xs-6">
+              <a class="link btn btn-default" target="_blank" href="##student-life##">Student Life</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <a class="link btn btn-default" target="_blank" href="##about-oc##">About OC</a>
+            </div>
+            <div class="col-xs-6">
+              <a class="link btn btn-default"target="_blank" href="##financial-aid##">Financial Aid</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <a class="link btn btn-default" target="_blank" href="##majors##">Majors</a>
+            </div>
+            <div class="col-xs-6">
+              <a class="link btn btn-default" target="_blank" href="##life-beyond-campus##">Life Beyond Campus</a>
+            </div>
+          </div>
+          <!--
+          <div id="phone-link" class="row">
+            <a target="_blank" style="color:#5EC1B3; text-decoration: none;" href="https://oc.elluciancrmrecruit.com/admissions/pages/prospectinquiry.aspx?f=992a063f-d4c2-4fce-b4f0-fabd91ff149c&o=1937ea79-f2b8-4b04-9cf0-a04040d6d4a0">
+              <p>
+                Click here to receive scholarship and important deadlines from OC via text message.
+              </p>
+            </a>
+          </div>
+          -->
+        </div>
+      </div>
+      
+      <div id="footer">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6" id="footer-logo">
+            <img src="https://s3.amazonaws.com/ocu/assets/img/ocu-logo.svg" alt="ocu-logo">
+          </div>
+          <div class="col-xs-12 col-sm-6 address-info">
+            <div>www.oc.edu<br/>800-877-5010</div>
+            <div>2501 E. Memorial Road<br/>Oklahoma City, OK</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

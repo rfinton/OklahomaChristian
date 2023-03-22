@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>OCU - WeRHome</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <style>
+      @font-face {
+        font-family: MyriadPro;
+        src: url('https://s3.amazonaws.com/ocu/assets/fonts/MyriadPro-Regular.otf');
+      }
+      body {
+        background-image: url('https://s3.amazonaws.com/ocu/assets/img/gradient-wallpaper-1.jpg');
+        background-size: 100% 100%;}
+      * {font-family: 'MyriadPro', sans-serif;}
+      .container-fluid {max-width: 1024px; opacity: 0; background-color: #ffffff;}
+      .svg-object {
+        opacity: 0;}
+      .svg-object.mobile {
+        display: none;}
+      .header {
+        background-image: url('https://s3.amazonaws.com/ocu/assets/img/stem-pg1.jpg');
+        background-repeat: none;
+        background-size: cover;
+        background-position: center;
+        padding: 180px 50px 60px;
+        text-align: center;}
+      #main-content {padding: 0 15px;}
+      #p_01 {
+        padding: 30px 0;}
+      table {min-height: 100px;}
+      .icons {
+        width: 100px;
+        height: 120px;
+        position: relative;}
+      .icon {
+        width: 100px; 
+        height: 100px;
+        position: absolute;
+        top: 10px;
+        left: 0;}
+      .icon:hover {cursor: pointer;}
+      .icon-clicked {display: none;}
+      .desc {padding: 0 0 0 12px;}
+      #actions {
+        width: 60%;
+        font-weight: bold;
+        padding: 15px 0;
+        margin: 30px auto;
+        text-align: center;}
+      #ready {
+        padding: 15px 0;
+        background-color: #5EC1B3;}
+      #visit { font-size: 14pt; margin: 15px 0; text-decoration: underline; }
+      #actions:hover {cursor: pointer;}
+      
+      #footer {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+        text-align: center;
+        color: #ffffff;
+        background-color: #393738;}
+      .address-info {
+        display: flex;
+        flex: 1;
+        justify-content: center;}
+      .address-info div {
+        text-align: left;
+        padding: 0 20px;}
+      .address-info div:first-of-type {border-right: solid 2px #ffffff;}
+      .strong {
+        font-weight: bold;}
+
+      @media screen and (max-width: 420px) {
+        .header {
+          background-position: center;
+          padding: 60px 15px;}
+        p {font-size: 12pt !important;}
+        #actions {width: 90%;}
+        #footer {display: block;}
+        #footer-logo img {width: 100%;}
+        .svg-object:last-of-type {display: none;}
+        .svg-object.mobile {display: block;}
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      document.cookie = "MFI=##purl##;domain=oc.edu;expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+
+      $(document).ready(function() {
+        var resp = [];
+
+        $('td').click(function(el) {
+          var i = $(el.currentTarget).data('resp');
+          var index = resp.indexOf(i);
+          if(index == -1) {
+            resp.push(i);
+            $(el.currentTarget).children('.icon-clicked').css('display', 'inline');
+          }
+          else {
+            resp.splice(index, 1);
+            $(el.currentTarget).children('.icon-clicked').css('display', 'none');
+          }
+          
+          $('input[name=form_resp]').val(resp);
+        }.bind(resp));
+
+        $('#actions div').click(function() {
+          $('input[name=submitaction]').val(this.dataset.action);
+          $('.container-fluid').velocity('transition.slideDownOut');
+          document.querySelector('#form').submit();
+
+          if(this.id == "visit") {
+            window.open("https://oc.edu/admissions/undergraduate/visit/?purl=##purl##");
+          }
+        });
+      });
+    </script>
+    <script src="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/utilities/micrositeprofiler.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="header row">
+
+        <svg viewbox="0 0 796 308" 
+          width="0" 
+          height="0" 
+          class="svg-object mobile" 
+          version="1.1" 
+          xmlns="http://www.w3.org/2000/svg" 
+          xmlns:xlink= "http://www.w3.org/1999/xlink">
+          <filter
+            style="color-interpolation-filters:sRGB"
+            inkscape:label="Blur"
+            id="filter1191">
+            <feGaussianBlur
+              stdDeviation="5"
+              result="blur"
+              id="feGaussianBlur1189" />
+          </filter>
+          <image 
+            xlink:href="https://s3.amazonaws.com/ocu/assets/img/tagline.png" 
+            x="0" y="0" width="796" height="308"
+            filter="url(#filter1191)" />
+        </svg>
+
+        <svg viewbox="0 0 1694 500" 
+          width="0" 
+          height="0" 
+          class="svg-object" 
+          version="1.1" 
+          xmlns="http://www.w3.org/2000/svg" 
+          xmlns:xlink= "http://www.w3.org/1999/xlink">
+          <filter
+            style="color-interpolation-filters:sRGB"
+            inkscape:label="Blur"
+            id="filter1192">
+            <feGaussianBlur
+              stdDeviation="5"
+              result="blur"
+              id="feGaussianBlur1190" />
+          </filter>
+          <image 
+            xlink:href="https://s3.amazonaws.com/ocu/assets/img/tagline-d.png" 
+            x="0" y="0" width="1694" height="500"
+            filter="url(#filter1192)" />
+        </svg>
+      </div>
+
+      <div id="main-content">
+        <p id="p_01">
+          <span class="strong">Welcome to OC, ##firstname##!</span><br>
+          <br>
+          Oklahoma Christian University is home to students who break it, fix it, prototype it, and create it. Students with one of OC's dozens of science, technology, engineering, and math degrees are changing the world. In the classroom, you'll be a part of world-class programs. Outside the classroom, you'll engage in our STEM organizations, participate in undergraduate research, and snag an internship in Oklahoma City.<br>
+          <br>
+          OC wants to know more about you! Click on the icons below, and tell us what will get you fired up. 
+        </p>
+    
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="icons" data-resp="Location">
+                    <div class="icon">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/okWhite.svg" alt="location">
+                    </div>
+                    <div class="icon icon-clicked">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/okRed.svg" alt="location">
+                    </div>
+                  </td>
+                  <td valign="center" class="desc">
+                    <p>I'm excited to be close to Oklahoma City so I can live a "big" life.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="icons" data-resp="Athletics">
+                    <div class="icon">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/eagleWhite.svg" alt="location">
+                    </div>
+                    <div class="icon icon-clicked">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/eagleRed.svg" alt="location">
+                    </div>
+                  </td>
+                  <td class="desc">
+                    <p>I want to be part of an athletic team and roll with Ike, the mascot.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 item">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="icons" data-resp="Spirituality">
+                    <div class="icon">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/bibleWhite.svg" alt="location">
+                    </div>
+                    <div class="icon icon-clicked">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/bibleRed.svg" alt="location">
+                    </div>
+                  </td>
+                  <td class="desc">
+                    <p>It's great you have a spiritual life component. It's part of who I am.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-xs-12 col-sm-6 item">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="icons" data-resp="Internships">
+                    <div class="icon">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/cityWhite.svg" alt="location">
+                    </div>
+                    <div class="icon icon-clicked">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/cityRed.svg" alt="location">
+                    </div>
+                  </td>
+                  <td class="desc">
+                    <p>I'm considering an internship at some point. You guys have a city booming with opportunity.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 item">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="icons" data-resp="Academics">
+                    <div class="icon">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/testTubeWhite.svg" alt="location">
+                    </div>
+                    <div class="icon icon-clicked">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/testTubeRed.svg" alt="location">
+                    </div>
+                  </td>
+                  <td class="desc">
+                    <p>I want to be challenged academically. Love that you are among the best in the west!</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-xs-12 col-sm-6 item">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="icons" data-resp="Community">
+                    <div class="icon">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/houseWhite.svg" alt="location">
+                    </div>
+                    <div class="icon icon-clicked">
+                      <img src="https://s3.amazonaws.com/ocu/assets/img/houseRed.svg" alt="location">
+                    </div>
+                  </td>
+                  <td class="desc">
+                    <p>OC is home means something to me. It's important that I matter during the next four years of college.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>        
+        </div>
+      </div>
+
+      <div id="actions">
+        <div id="ready" data-action="I'm Ready" class="strong">I'm Ready&mdash;What's Next?</div>
+        <div id="visit" data-action="I'd Like to Visit">I'd Like To Visit</div>
+      </div>
+
+      <form method="post" id="form" onsubmit="return false;">
+        <div style="display:none;">
+          <input type="text" name="form_resp" value="">
+          <input type="text" name="submitaction" value="">
+          <input type="text" name="QRcodeUsed" id="QRcodeUsed" value="">
+          <input type="text" name="engagePlatform" id="engagePlatform" value="">
+          <input type="text" name="engageBrowserName" id="engageBrowserName" value=""> 
+          <input type="text" name="engageBrowserCodeName" id="engageBrowserCodeName" value="">
+        </div>
+      </form>
+      
+      <div id="footer" class="row">
+        <div class="col-xs-12 col-sm-6" id="footer-logo">
+          <img src="https://s3.amazonaws.com/ocu/assets/img/ocu-logo.svg" alt="ocu-logo">
+        </div>
+        <div class="col-xs-12 col-sm-6 address-info">
+          <div>www.oc.edu<br/>800-877-5010</div>
+          <div>2501 E. Memorial Road<br/>Oklahoma City, OK</div>
+        </div>
+      </div>
+        
+    </div> <!-- End Bootstrap Container -->
+
+    <script src="https://s3.amazonaws.com/ocu/node_modules/velocity/velocity.min.js"></script>
+    <script src="https://s3.amazonaws.com/ocu/node_modules/velocity/velocity.ui.min.js"></script>
+    <script src="https://s3.amazonaws.com/enrollmentfuel/lib/track-v1.3.min.js"></script>
+    <script>
+      window.addEventListener('load', function() {
+        $('.svg-object').eq(0).attr({
+          width: $('.header').outerWidth()-30,
+          height: ($('.header').outerWidth()-30)/2.497
+        });
+
+        $('.svg-object').eq(1).attr({
+          width: $('.header').outerWidth()-100,
+          height: ($('.header').outerWidth()-100)/3.388
+        });
+
+        $('.container-fluid').velocity('fadeIn', 750);
+        
+        var fontFactor = innerWidth * 0.009;
+
+        if(fontFactor < 14) {
+          $('p').css('font-size', '14pt');
+          $('.strong').css('font-size', '16pt');
+        }
+        else {
+          $('p').css('font-size', fontFactor + 'pt');
+          $('.strong').css('font-size', fontFactor + 2 + 'pt');
+        }
+
+        var Focus = function() {
+          var f1 = document.querySelector('#feGaussianBlur1189');
+          var f2 = document.querySelector('#feGaussianBlur1190');
+          var deviation = 0
+
+          var interval = setInterval(function() {
+            if(deviation < 5) {
+              f1.setAttribute('stdDeviation', 5*(Math.sin(deviation+=0.05)+1));
+              f2.setAttribute('stdDeviation', 5*(Math.sin(deviation+=0.05)+1));
+            }
+            else {
+              clearInterval(interval);
+              f1.setAttribute('stdDeviation', 0);
+              f2.setAttribute('stdDeviation', 0);
+            }
+          }, 1000/29);
+        };
+
+        setTimeout(function() {
+          $('.svg-object').velocity({ opacity: [1,0] }, { duration: 500 });
+          var focus = new Focus();
+        }, 500);
+      });
+    </script>    
+  </body>
+</html>

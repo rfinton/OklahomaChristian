@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139928482-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-139928482-1');
+</script>
+
+<script>
+  var query_string = window.location.search;
+  var url = '';
+
+  query_string = query_string.replace( /&*cookiecheck=true/gi, "" );
+  query_string = query_string.replace( /&*sessionguid=.+/gi, "" );
+  url = "'https://werhome.oc.edu/##PURL##/landingpage.html" + query_string + "'";
+  document.write('<meta http-equiv="refresh" content="0;URL=' + url + '">');
+</script>
+</head>
+<body>
+<noscript>JavaScript is not enabled. JavaScript must be enabled in your browser settings to continue.</noscript>
+</body>
+</html>

@@ -1,0 +1,26 @@
+Field	Value
+Domain	oc.edu
+Selector	enrollmentfuel
+Private Key	-----BEGIN RSA PRIVATE KEY-----
+MIICXgIBAAKBgQDBPfdZbrbRr6lem5yzhZAT/vQswA+hPAizdMUCGc0BUh6zG4ni
+FrMszJoBzvnke0/2b4ID45dqsC+fXC4NjIqvy12x7ndDwoJa/z/+jQiTIIX8Th6C
++cmjCmz+jGatDc0vm1zfTrrRflumcQfXieDUO2chAIJAceV8rv6tviQt3wIDAQAB
+AoGBAJYXokJFexw820mPhlPtvq25TkBf4QPz1DJG1So/jfqjpRKqphsEVKDMPiZ/
+c5siqEYZ8BtDL/1+4U5e06pUafarSFepLj3MR9Q4984F034y0kjUhKdfJj4oh01I
+KZVvZ4C7ULmaX1k188pwrAcy+mp9P4wstiYau4e28oHdSK3RAkEA+MsGj92GZOyD
+upL/ArOos1psCfq7I1XNRlugTV86HrEA0+sMja0moMC5jrH5zaMCCbp8JBLE6eTv
+d1ayVuiZ5wJBAMbW/bMSLvjSmxmqiLFbAYTR57rBYqlrDXM2Jb8DHaeGcDwUM1lU
++7P71eS4z42SnE7iNm3fXMnca3ghCkux/UkCQQDSWUWZCWEBn37YlkQJksDFs2O5
+JEZo37iJDhsAj8zh+iGLCyY3+ve33nqEjTF5jaLBeuxOy5e1cZyNt71dAZhtAkBi
+P0xvtKZc78MPNYIBEBR6CjVTw8X6LBkjOjgAX4vBgN3n8ZtFooYT8nVHZEG5lB2D
+pKZ8N4djfnPjkX/C0xlxAkEAnNRyA4OsfP7hZ9vvfkaGB+oDLgEBMUjfEEQ5/jmQ
+lQd596JcpzIHU14mqpA4duHmmw5Qx9DsLbincwXyatVPLQ==
+-----END RSA PRIVATE KEY-----
+
+
+Name	Value
+_domainkey.oc.edu	t=y;o=~;
+enrollmentfuel._domainkey.oc.edu	k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBPfdZbrbRr6lem5yzhZAT/vQs
+wA+hPAizdMUCGc0BUh6zG4niFrMszJoBzvnke0/2b4ID45dqsC+fXC4NjIqvy12x
+7ndDwoJa/z/+jQiTIIX8Th6C+cmjCmz+jGatDc0vm1zfTrrRflumcQfXieDUO2ch
+AIJAceV8rv6tviQt3wIDAQAB
